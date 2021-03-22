@@ -16,32 +16,26 @@ data <- read.table("household_power_consumption.txt",sep = ";",header = TRUE)
 data$Date <- as.Date(data$Date, "%d/%m/%Y")
 data<-data%>%filter(Date>="2007-02-01" & Date<="2007-02-02")
 
-
-a<-data$Sub_metering_1<-as.numeric(data$Sub_metering_1)
-b<-data$Sub_metering_2<-as.numeric(data$Sub_metering_2)
-c<-data$Sub_metering_3<-as.numeric(data$Sub_metering_3)
-
-plot(a,
-     type="l",
-     xlab="",
-     xaxt = "n",
-     ylab="Energy sub metering")
-lines(b,type="l",col="red")
-lines(c,type="l",col="blue")
+with(data,plot(Sub_metering_1,
+               type="l",
+               xlab="",
+               xaxt = "n",
+               ylab="Energy sub metering"))
+lines(data$Sub_metering_2,type="l",col="red")
+lines(data$Sub_metering_3,type="l",col="blue")
 
 axis(1, at=c(0, 1500,2900 ), labels=c("Thu","Fri","Sat"), las=1)
 legend("topright",
        legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"),
-       lty=1,cex=1.2,
-       col=c("black","red","blue"),
-       xjust = 1, yjust = 1)
+       lty=1,cex=1,
+       col=c("black","red","blue"))
 
 
 dev.copy(png,file="plot3.png")
 dev.off()
 
 end_time <- Sys.time()
-end_time - start_time #Time difference of 21.962 secs
+end_time - start_time #Time difference of 20.97 secs
 
 
 
