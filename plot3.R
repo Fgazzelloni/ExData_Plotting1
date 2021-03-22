@@ -24,7 +24,7 @@ with(data,plot(Sub_metering_1,
 lines(data$Sub_metering_2,type="l",col="red")
 lines(data$Sub_metering_3,type="l",col="blue")
 
-axis(1, at=c(0, 1500,2900 ), labels=c("Thu","Fri","Sat"), las=1)
+axis(1, at=c(0, 1500,2880 ), labels=c("Thu","Fri","Sat"), las=1)
 legend("topright",
        legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"),
        lty=1,cex=1,

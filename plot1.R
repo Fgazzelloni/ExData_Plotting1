@@ -25,31 +25,3 @@ end_time - start_time
 
 # Time difference of 39.749 secs
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

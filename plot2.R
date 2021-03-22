@@ -26,7 +26,7 @@ with(data,plot(Global_active_power,
                xaxt = "n",
                ylab="Global Active Power (kilowatts)"))
 
-axis(1, at=c(0, 1500,2800 ), labels=c("Thu","Fri","Sat"), las=1)
+axis(1, at=c(0, 1500,2880 ), labels=c("Thu","Fri","Sat"), las=1)
 
 
 
@@ -35,7 +35,8 @@ dev.off()
 
 end_time <- Sys.time()
 
-end_time - start_time
+end_time - start_time #Time difference of 23.126 secs
+
 
 
 
