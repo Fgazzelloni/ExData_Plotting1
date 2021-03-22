@@ -58,12 +58,11 @@ legend("topright",
        lty = 1,
        bty="n",
        legend = text,
-       text.width = strwidth(text)[1]/4,
+       text.width = strwidth(text)[1],
        x.intersp=0.5,y.intersp=0.2,
-       cex = 0.75,
-       col = c("black","red","blue")
-)
-
+       cex = 0.75,pt.cex = cex,
+       col = c("black","red","blue"),
+       strwidth(text))
 
 #plot4
 data$Global_reactive_power<-as.numeric(data$Global_reactive_power)
